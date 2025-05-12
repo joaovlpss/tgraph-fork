@@ -1,1 +1,0 @@
-#empty - just so that IDEAL_LAYOUT becomes a package
