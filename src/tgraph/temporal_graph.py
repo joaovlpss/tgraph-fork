@@ -20,7 +20,7 @@ NODE_ID = "node_ID"
 
 # iat features
 AVG_IAT = "average_iat"
-MAD_IAT = "mad_iat"
+# MAD_IAT = "mad_iat"
 MEDIAN_IAT = "median_iat"
 MIN_IAT = "min_iat"
 MAX_IAT = "max_iat"
@@ -34,7 +34,7 @@ CALL_COUNT = "call_count"
 
 # measure/duration features
 AVG_MEASURE = "average_measure"
-MAD_MEASURE = "mad_measure"
+# MAD_MEASURE = "mad_measure"
 MEDIAN_MEASURE = "median_measure"
 MIN_MEASURE = "min_measure"
 MAX_MEASURE = "max_measure"
@@ -129,7 +129,7 @@ class TemporalGraph:
         # Aggregate iat per group/hash
         df_iat_measure = pd.DataFrame()
         df_iat_measure[prefix + AVG_IAT] = group.mean()
-        df_iat_measure[prefix + MAD_IAT] = group.mad()
+        # df_iat_measure[prefix + MAD_IAT] = group.mad()
         df_iat_measure[prefix + MEDIAN_IAT] = group.median()
         df_iat_measure[prefix + STD_IAT] = group.std(ddof=0)
         df_iat_measure[prefix + MIN_IAT] = group.min()
@@ -146,7 +146,7 @@ class TemporalGraph:
         group = df_aux.groupby(by=[node_direction], axis=0)[MEASURE]
 
         df_iat_measure[prefix + AVG_MEASURE] = group.mean()
-        df_iat_measure[prefix + MAD_MEASURE] = group.mad()
+        # df_iat_measure[prefix + MAD_MEASURE] = group.mad()
         df_iat_measure[prefix + MEDIAN_MEASURE] = group.median()
         df_iat_measure[prefix + STD_MEASURE] = group.std(ddof=0)
         df_iat_measure[prefix + MIN_MEASURE] = group.min()
