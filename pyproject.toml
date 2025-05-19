@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tgraph"
-version = "1.0.0"
+version = "1.0.1"
 description = "Implementation of the t-graph package presented in the paper 'CallMine: Fraud Detection and Visualization of Million-Scale Call Graphs'."
 readme = "README.md"
 authors = [{ name = "Mirela Cazzolato", email = "mirelac@usp.br" }]
@@ -23,7 +23,7 @@ dependencies = [
 requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/mtcazzolato/callmine"
+Homepage = "https://github.com/joaovlpss/tgraph-fork"
 
 [project.scripts]
 staticgraph = "tgraph.static_graph:main"
